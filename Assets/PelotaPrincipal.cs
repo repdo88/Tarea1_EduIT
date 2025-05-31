@@ -24,15 +24,19 @@ public class PelotaPrincipal : MonoBehaviour
 
     private void OnTriggerEnter(Collider collider)
     {
+        if (collider.gameObject.CompareTag("ChekPoint"))
+        {
+            print("Acertaste");
+            cuenta += 1;
+            Destroy(collider.gameObject);
+        }
+
         if (collider.gameObject.CompareTag("Finish"))
         {
             print("Total de puntos: " + cuenta);
         }
 
-        if (collider.gameObject.CompareTag("ChekPoint"))
-        {
-            cuenta = +1;
-        }
+
 
     }
 }
