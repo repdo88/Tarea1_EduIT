@@ -49,7 +49,7 @@ public class PelotaPrincipal : MonoBehaviour
     {
         if (collider.gameObject.CompareTag("ChekPoint"))
         {
-            print("Acertaste");
+            //print("Acertaste");
             cuenta += 1;
             Destroy(collider.gameObject);
         }
